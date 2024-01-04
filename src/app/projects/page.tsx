@@ -1,4 +1,3 @@
-import React from "react";
 import { FaLaptopCode } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import Footer from "../../components/Footer";

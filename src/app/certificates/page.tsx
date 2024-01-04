@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 
@@ -13,7 +13,7 @@ const Certificates = () => {
                          </h1>
                          <div className="sm:flex gap-2 p-2">
                               <div className="content h-48 flex-1">
-                                   <img
+                                   <Image
                                         src="/udemy.webp"
                                         className="w-full h-full"
                                         alt=""

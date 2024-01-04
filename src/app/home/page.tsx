@@ -1,8 +1,10 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import Typewriter from "typewriter-effect";
+import profile from "../../assets/biggysmall.jpg";
+import Image from "next/image";
 
 const TypewriterComponent: React.FC = () => {
      "use client";
@@ -15,7 +17,7 @@ const TypewriterComponent: React.FC = () => {
           const interval = setInterval(() => {
                setText(words[index]);
                index = (index + 1) % words.length;
-          }, 2000);
+          }, 1000);
 
           return () => clearInterval(interval);
      }, []);
@@ -39,10 +41,10 @@ const Home = () => {
                <Navbar />
                <main className="m-auto text-center py-4 border-y-2 border-gray-700 max-w-[640px] w-full">
                     <h1 className="h-32 w-32 rounded-[50%] my-4 mx-auto">
-                         <img
+                         <Image
                               className="block w-full h-full rounded-[50%] object-cover"
-                              src="/biggysmall.jpg"
-                              alt="Mas'ud"
+                              src={profile}
+                              alt="Mas'ud Image"
                          />
                     </h1>
                     <h2 className="font-bold text-3xl">Ndatsu Mas'ud</h2>

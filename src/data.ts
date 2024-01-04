@@ -1,3 +1,7 @@
+import opspad from "./assets/opspad.dev.jpg";
+import packer from "./assets/packer-logistics.png";
+import storereload from "./assets/store-reload.png";
+
 export const data = [
      {
           title: "Opspad",
@@ -6,16 +10,16 @@ export const data = [
           tools: "Reactjs, Nodejs, Expressjs, MySQL(Knex ORM)",
           link: "https://opspad.dev",
           github: "",
-          image: "",
+          image: opspad,
      },
      {
           title: "Packer Logistics",
           description: `This project is a logistics web application for user to move their goods from different locations with out being there.
-               All they need to do is just place order and select the vehicle they want.`,
+               All they need to do is just place order and select the vehicle they want to use.`,
           tools: "Reactjs, Nodejs, Expressjs, MongoDB, Google Map Service",
           link: "https://packer-web.vercel.app/",
           github: "",
-          image: "",
+          image: packer,
      },
      {
           title: "StoreReload",
@@ -23,6 +27,6 @@ export const data = [
           tools: "Reactjs, Nodejs, Expressjs, MongoDB",
           link: "https://storereload-landing-page.onrender.com/",
           github: "",
-          image: "",
+          image: storereload,
      },
 ];
