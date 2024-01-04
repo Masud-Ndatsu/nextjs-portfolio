@@ -11,8 +11,11 @@ const Projects = () => {
                <Navbar />
                <main className="m-auto text-center py-4 border-y-2 border-gray-700 max-w-[750px] w-full">
                     <div className="container py-6 px-2 flex flex-col gap-4">
-                         {data.map((project) => (
-                              <div className="w-full border-2 border-gray-500 rounded">
+                         {data.map((project, index) => (
+                              <div
+                                   key={index.toString()}
+                                   className="w-full border-2 border-gray-500 rounded"
+                              >
                                    <h1 className="border-b border-gray-600 py-2 text-xl font-bold">
                                         {project.title}
                                    </h1>

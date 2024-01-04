@@ -47,7 +47,7 @@ const Home = () => {
                               alt="Mas'ud Image"
                          />
                     </h1>
-                    <h2 className="font-bold text-3xl">Ndatsu Mas'ud</h2>
+                    <h2 className="font-bold text-3xl">Ndatsu Masud</h2>
                     <h1 className="font-bold text-4xl text-gray-600 py-1">
                          <TypewriterComponent />
                     </h1>
