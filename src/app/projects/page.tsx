@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Projects = () => {
      return (
-          <div className="flex flex-col justify-between py-12 text-center">
+          <div className="min-h-screen flex flex-col justify-between py-12 text-center">
                <Navbar />
                <main className="m-auto text-center py-4 border-y-2 border-gray-700 max-w-[750px] w-full">
                     <div className="container py-6 px-2 flex flex-col gap-4">
@@ -25,6 +25,7 @@ const Projects = () => {
                                                   src={project.image}
                                                   className="w-full h-full"
                                                   alt=""
+                                                  loading="lazy"
                                              />
                                         </div>
                                         <div className="content h-full flex-[2]">

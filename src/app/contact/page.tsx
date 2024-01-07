@@ -1,16 +1,46 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 
 const Contact = () => {
+     const [name, setName] = useState<string>("");
+     const [email, setEmail] = useState<string>("");
+     const [message, setMessage] = useState<string>("");
+
+     const handleSubmit = async (e: any) => {
+          e.preventDefault();
+          try {
+               const data = {
+                    name,
+                    email,
+                    message,
+               };
+               console.log({
+                    data,
+               });
+               const req = await fetch("/api/contacts", {
+                    method: "POST",
+                    body: JSON.stringify(data),
+                    headers: {
+                         "Content-Type": "application/json",
+                    },
+               });
+          } catch (error) {
+               console.log({
+                    error,
+               });
+          }
+     };
+
      return (
-          <div className="flex flex-col justify-between py-12 text-center">
+          <div className="min-h-screen flex flex-col justify-between py-12 text-center">
                <Navbar />
                <main className="m-auto text-center py-4 px-3 border-y-2 border-gray-700 max-w-[640px] w-full">
                     <h1 className="text-3xl font-extrabond">Contact Me</h1>
                     <form
                          className="max-w-[400px] w-full m-auto py-4"
-                         action=""
+                         onSubmit={handleSubmit}
                     >
                          <div>
                               <label
@@ -22,8 +52,11 @@ const Contact = () => {
                               <input
                                    className="border border-gray-600 focus:outline-blue-300 w-full p-1 rounded"
                                    type="text"
-                                   name=""
-                                   id=""
+                                   name="name"
+                                   id="name"
+                                   value={name}
+                                   onChange={(e) => setName(e.target.value)}
+                                   required
                               />
                          </div>
                          <div>
@@ -35,9 +68,12 @@ const Contact = () => {
                               </label>
                               <input
                                    className="border border-gray-600 focus:outline-blue-300 w-full p-1 rounded"
-                                   type="text"
-                                   name=""
-                                   id=""
+                                   type="email"
+                                   name="email"
+                                   id="email"
+                                   value={email}
+                                   onChange={(e) => setEmail(e.target.value)}
+                                   required
                               />
                          </div>
                          <div>
@@ -49,10 +85,13 @@ const Contact = () => {
                               </label>
                               <textarea
                                    className="resize-none border border-gray-600 focus:outline-blue-300 w-full p-1 rounded"
-                                   name=""
-                                   id=""
+                                   name="message"
+                                   id="message"
                                    cols={30}
                                    rows={5}
+                                   value={message}
+                                   onChange={(e) => setMessage(e.target.value)}
+                                   required
                               ></textarea>
                          </div>
                          <button

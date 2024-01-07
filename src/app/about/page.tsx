@@ -17,7 +17,7 @@ const About = () => {
                          opportunity to learn something new and improve on it.
                     </div>
                     <a
-                         href="/CV - Ndatsu Mas'ud.pdf"
+                         href=""
                          className="p-2 bg-gray-500 text-gray-200 text-center flex items-center justify-center gap-2 rounded m-auto w-[200px]"
                          download
                     >

@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
+import udemy from "../../assets/udemy.webp";
 
 const Certificates = () => {
      return (
-          <div className="flex flex-col justify-between py-12 text-center">
+          <div className="min-h-screen flex flex-col justify-between py-12 text-center">
                <Navbar />
                <main className="m-auto text-center py-4 px-2 border-y-2 border-gray-700 max-w-[640px] w-full">
                     <div className="w-full border-2 border-gray-500 rounded">
@@ -14,9 +15,12 @@ const Certificates = () => {
                          <div className="sm:flex gap-2 p-2">
                               <div className="content h-48 flex-1">
                                    <Image
-                                        src="/udemy.webp"
+                                        src={udemy}
                                         className="w-full h-full"
                                         alt=""
+                                        loading="lazy"
+                                        width={100}
+                                        height={100}
                                    />
                               </div>
                               <div className="content h-full flex-[1.5] text-left text-lg">
