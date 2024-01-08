@@ -10,7 +10,7 @@ const TypewriterComponent: React.FC = () => {
      const [text, setText] = useState<string>("");
 
      useEffect(() => {
-          const words: string[] = ["I'm", "a", "Fullstack", "Developer"];
+          const words: string[] = ["Fullstack", "Developer"];
           let index: number = 0;
 
           const interval = setInterval(() => {
