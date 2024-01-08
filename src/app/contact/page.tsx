@@ -16,9 +16,10 @@ const Contact = () => {
                     email,
                     message,
                };
-               console.log({
-                    data,
-               });
+               setName("");
+               setEmail("");
+               setMessage("");
+
                const req = await fetch("/api/contacts", {
                     method: "POST",
                     body: JSON.stringify(data),

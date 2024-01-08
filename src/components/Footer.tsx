@@ -21,7 +21,7 @@ const Footer = () => {
                     <AiOutlineTwitter />
                </a>
                <a
-                    href="https://github.com/Masud-Ndatsu/my-porfolio"
+                    href="https://github.com/Masud-Ndatsu/nextjs-portfolio"
                     target="_blank"
                     rel="noreferrer"
                     className="px-2 py-3 text-3xl"
