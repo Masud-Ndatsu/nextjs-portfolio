@@ -7,11 +7,10 @@ import profile from "../../assets/biggysmall.jpg";
 import Image from "next/image";
 
 const TypewriterComponent: React.FC = () => {
-     "use client";
      const [text, setText] = useState<string>("");
 
      useEffect(() => {
-          const words: string[] = ["I'm", "A", "Fullstack", "Developer"];
+          const words: string[] = ["I'm", "a", "Fullstack", "Developer"];
           let index: number = 0;
 
           const interval = setInterval(() => {
